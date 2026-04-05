@@ -1,0 +1,31 @@
+{
+  "name": "eloquentpolls",
+  "version": "1.0.0",
+  "description": "TypeScript SDK and CLI for the Eloquent Poll multi-model consensus polling API",
+  "private": false,
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "eloquentpolls": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:integration": "vitest run tests/integration.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["eloquentpoll", "eloquentpolls", "ai", "consensus", "polling", "multi-model", "sdk", "cli"],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^3.1.1"
+  }
+}
